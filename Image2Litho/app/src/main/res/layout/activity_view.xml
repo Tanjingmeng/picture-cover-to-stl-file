@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.project.tipta.image2litho.ViewActivity">
+    <FrameLayout
+        android:id="@+id/stlFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_file_download_white_36dp"
+        android:id="@+id/downloadButton"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:background="@mipmap/ic_file_download_white_36dp" />
+</RelativeLayout>

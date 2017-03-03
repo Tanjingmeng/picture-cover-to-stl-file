@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">image2litho</string>
+    <string name="pic_select">Select a picture</string>
+
+    <!-- Setting -->
+    <string name="Setting">Settings: </string>
+    <string name="Positive">Positive</string>
+    <string name="Negative">Negative</string>
+    <string name="MaximumSize">Maximum Size: </string>
+    <string name="Thickness">Thickness: </string>
+    <string name="Border">Border: </string>
+    <string name="ThinnestLayer">Thinnest Layer: </string>
+    <string name="PixelPerMM">Quality Level: </string>
+
+    <!-- Button -->
+    <string name="Generate">Generate</string>
+
+    <!-- 	Show STL -->
+    <string name="stl_load_progress_message">Wait a second...</string>
+    <string name="stl_load_progress_title">Model Loading...</string>
+    <string name="error_fetch_data">Model Load Fail.</string>
+    <string name="error_outbig"> File is too big！</string>
+    <string name="close_dialog">Close dialog</string>
+    <string name="parent_directory">Parent directory</string>
+    <string name="choose_stl_file">Choose stl file</string>
+
+</resources>

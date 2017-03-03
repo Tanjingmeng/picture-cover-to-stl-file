@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.project.tipta.image2litho.MainActivity">
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:id="@+id/downloadButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/SltImgText"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:gravity="center"
+        android:text="@string/pic_select"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/downloadButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/Generate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonGenerate"
+        android:layout_weight="1"
+        android:layout_alignParentBottom="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/downloadButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/setting1"
+                android:weightSum="1">
+
+                <TextView
+                    android:text="@string/Setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView1"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:textStyle="normal|bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/setting2"
+                android:layout_below="@+id/setting1"
+                android:weightSum="2">
+
+                <Switch
+                    android:text="@string/Positive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/switchPositive"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal|center|start"
+                    android:checked="false" />
+
+                <TextView
+                    android:text="@string/Negative"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:paddingRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/setting3"
+                android:layout_below="@+id/setting2"
+                android:weightSum="4">
+
+                <TextView
+                    android:text="@string/MaximumSize"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:text="100mm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewMaximumSize"
+                    android:layout_weight="1"
+                    android:gravity="right"/>
+
+                <SeekBar
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/seekBarMaximumSize"
+                    android:layout_weight="2"
+                    android:max="150"
+                    android:progress="50" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/setting4"
+                android:layout_below="@+id/setting3"
+                android:weightSum="4">
+
+                <TextView
+                    android:text="@string/Thickness"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:text="3.0mm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewThickness"
+                    android:layout_weight="1"
+                    android:gravity="right"/>
+
+                <SeekBar
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/seekBarThickness"
+                    android:layout_weight="2"
+                    android:max="70"
+                    android:progress="0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/setting5"
+                android:layout_below="@+id/setting4"
+                android:weightSum="4">
+
+                <TextView
+                    android:text="@string/Border"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView5"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:text="0mm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewBorder"
+                    android:layout_weight="1"
+                    android:gravity="right"/>
+
+                <SeekBar
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/seekBarBorder"
+                    android:layout_weight="2"
+                    android:max="10"
+                    android:progress="0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/setting6"
+                android:layout_below="@+id/setting5"
+                android:weightSum="4">
+
+                <TextView
+                    android:text="@string/ThinnestLayer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView6"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:text="2.0mm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewThinnestLayer"
+                    android:layout_weight="1"
+                    android:gravity="right"/>
+
+                <SeekBar
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/seekBarThinnestLayer"
+                    android:layout_weight="2"
+                    android:max="20"
+                    android:progress="0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/setting7"
+                android:layout_below="@+id/setting6"
+                android:weightSum="4">
+
+                <TextView
+                    android:text="@string/PixelPerMM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView7"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:text="2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewPixelPerMM"
+                    android:layout_weight="1"
+                    android:gravity="right"/>
+
+                <SeekBar
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/seekBarPixelPerMM"
+                    android:layout_weight="2"
+                    android:max="2"
+                    android:progress="1"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
